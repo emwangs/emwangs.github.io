@@ -57,38 +57,67 @@
 
                 <div class="box">
                     <div class="gallery style2 small lightbox onload-fade-in">
-                        <article>
-                            <a href="images/mongodb.jpg" class="image">
+                        <article id="myBtn">
+                            <a class="image">
                                 <img src="images/mongodb.jpg" alt="" />
                             </a>
                         </article>
-                        <article>
-                            <a href="images/intersystems.jpg" class="image">
-                                <img src="images/intersystems.jpg" alt="" />
-                            </a>
-                        </article>
-                        <article>
-                            <a href="images/intersystems.jpg" class="image">
-                                <img src="images/intersystems.jpg" alt="" />
-                            </a>
-                        </article>
-                        <article>
-                            <a href="images/intersystems.jpg" class="image">
-                                <img src="images/intersystems.jpg" alt="" />
-                            </a>
-                        </article>
-                        <article>
-                            <a href="images/intersystems.jpg" class="image">
-                                <img src="images/intersystems.jpg" alt="" />
-                            </a>
-                        </article>
-                        <article>
-                            <a href="images/intersystems.jpg" class="image">
+                        <article id="intersystemsBtn">
+                            <a class="image">
                                 <img src="images/intersystems.jpg" alt="" />
                             </a>
                         </article>
 
+                        <div id="myModal" class="modal-portfolio">
 
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="modal-header">Abstract Binding Tree @ MongoDB</div>
+                                <div class="modal-paragraph">MongoDB's query optimizer is classically a
+                                    heuristics-based optimizer. What does this mean? This means when you get a query
+                                    like this: </div>
+                                <div class="modal-paragraph">
+                                    db.collection.find({}).sort(1).limit(5).moreQuery();
+                                </div>
+                                <div class="modal-paragraph">
+                                    MongoDB matches the steps of the query and does some optimizations like
+                                    switching steps, choosing indexes, and other canonical optimizations that usually
+                                    will make the query faster.
+                                </div>
+
+                                <div class="modal-paragraph">
+                                    The Abstract Binding Tree, on the other hand, aims to create a new form of query
+                                    representation that allows queries to go through a
+                                    dynamic-programming based optimizer!
+                                </div>
+
+                                <div class="modal-paragraph">
+                                    On this project, I worked on three components: I implemented $project functionality
+                                    in the new query optimizer. Secondly, I implemented type-bracketing essential to
+                                    greater-than and less-than queries. Lastly, I designed and implemented translating
+                                    $in expressions
+                                    in MQL; this took the size of the generated query tree from O(n)-sized tree to O(1)!
+                                </div>
+
+                                <div class="modal-paragraph">All of this was done in C++. On top of learning about
+                                    databases, C++, and better programming, I learned about build systems, continuous
+                                    integrations and continuous deployment (CI/CD), and more.</div>
+
+
+
+
+
+                                <div class="modal-paragraph"> <a target="_blank" rel="noopener noreferrer"
+                                        href="https://github.com/mongodb/mongo/tree/master/src/mongo/db/pipeline/abt">
+                                        Project
+                                        Repository</a>
+
+                                </div>
+
+
+                            </div>
+                        </div>
 
                     </div>
 
@@ -96,7 +125,7 @@
             </div>
 
             <!-- Footer -->
-            <footer id="footer">
+            <footer id=" footer">
                 <div class="inner">
                     <ul class="icons">
 
@@ -114,6 +143,35 @@
             <!--</div>-->
 
             <!-- Scripts -->
+            <script>
+                var modal = document.getElementById("myModal");
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("myBtn");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on the button, open the modal
+                btn.onclick = function () {
+                    console.log("MODAL OPEN")
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    console.log("MODAL CLOSE")
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+
+            </script>
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/jquery.dropotron.min.js"></script>
             <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -123,6 +181,9 @@
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
 
+
+
 </body>
+
 
 </html>

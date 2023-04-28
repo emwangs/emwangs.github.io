@@ -1,10 +1,10 @@
 /*
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Forty by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-(function($) {
+(function ($) {
 
     var $window = $(window),
         $body = $('body'),
@@ -26,7 +26,7 @@
      * Applies parallax scrolling to an element's background image.
      * @return {jQuery} jQuery object.
      */
-    $.fn._parallax = (browser.name == 'ie' || browser.name == 'edge' || browser.mobile) ? function() { return $(this) } : function(intensity) {
+    $.fn._parallax = (browser.name == 'ie' || browser.name == 'edge' || browser.mobile) ? function () { return $(this) } : function (intensity) {
 
         var $window = $(window),
             $this = $(this);
@@ -46,17 +46,17 @@
         if (!intensity)
             intensity = 0.25;
 
-        $this.each(function() {
+        $this.each(function () {
 
             var $t = $(this),
                 on, off;
 
-            on = function() {
+            on = function () {
 
                 $t.css('background-position', 'center 100%, center 100%, center 0px');
 
                 $window
-                    .on('scroll._parallax', function() {
+                    .on('scroll._parallax', function () {
 
                         var pos = parseInt($window.scrollTop()) - parseInt($t.position().top);
 
@@ -66,7 +66,7 @@
 
             };
 
-            off = function() {
+            off = function () {
 
                 $t
                     .css('background-position', '');
@@ -83,7 +83,7 @@
 
         $window
             .off('load._parallax resize._parallax')
-            .on('load._parallax resize._parallax', function() {
+            .on('load._parallax resize._parallax', function () {
                 $window.trigger('scroll');
             });
 
@@ -92,15 +92,15 @@
     };
 
     // Play initial animations on page load.
-    $window.on('load', function() {
-        window.setTimeout(function() {
+    $window.on('load', function () {
+        window.setTimeout(function () {
             $body.removeClass('is-preload');
         }, 100);
     });
 
     // Clear transitioning state on unload/hide.
-    $window.on('unload pagehide', function() {
-        window.setTimeout(function() {
+    $window.on('unload pagehide', function () {
+        window.setTimeout(function () {
             $('.is-transitioning').removeClass('is-transitioning');
         }, 250);
     });
@@ -111,7 +111,7 @@
 
     // Scrolly.
     $('.scrolly').scrolly({
-        offset: function() {
+        offset: function () {
             return $header.height() - 2;
         }
     });
@@ -119,7 +119,7 @@
     // Tiles.
     var $tiles = $('.tiles > article');
 
-    $tiles.each(function() {
+    $tiles.each(function () {
 
         var $this = $(this),
             $image = $this.find('.image'),
@@ -149,7 +149,9 @@
 
             $link = $link.add($x);
 
-            $link.on('click', function(event) {
+            $link.on('click', function (event) {
+                var modal = $this.getElementById("myModal");
+
 
                 var href = $link.attr('href');
 
@@ -173,7 +175,7 @@
                     $wrapper.addClass('is-transitioning');
 
                     // Redirect.
-                    window.setTimeout(function() {
+                    window.setTimeout(function () {
                         location.href = href;
                     }, 500);
 
@@ -186,7 +188,7 @@
     });
 
     // Banner.
-    $banner.each(function() {
+    $banner.each(function () {
 
         var $this = $(this),
             $image = $this.find('.image'),
@@ -217,20 +219,20 @@
 
     // Toggle.
     $(
-            '<div id="navToggle">' +
-            '<a href="#navPanel" class="toggle"></a>' +
-            '</div>'
-        )
+        '<div id="navToggle">' +
+        '<a href="#navPanel" class="toggle"></a>' +
+        '</div>'
+    )
         .appendTo($body);
 
     // Panel.
     $(
-            '<div id="navPanel">' +
-            '<nav>' +
-            $('#nav').navList() +
-            '</nav>' +
-            '</div>'
-        )
+        '<div id="navPanel">' +
+        '<nav>' +
+        $('#nav').navList() +
+        '</nav>' +
+        '</div>'
+    )
         .appendTo($body)
         .panel({
             delay: 500,
@@ -251,16 +253,16 @@
             top: '30vh',
             bottom: '30vh',
             delay: 50,
-            initialize: function() {
+            initialize: function () {
                 $(this).addClass('is-inactive');
             },
-            terminate: function() {
+            terminate: function () {
                 $(this).removeClass('is-inactive');
             },
-            enter: function() {
+            enter: function () {
                 $(this).removeClass('is-inactive');
             },
-            leave: function() {
+            leave: function () {
 
                 var $this = $(this);
 
@@ -280,7 +282,7 @@
 
     // Style #2.
     $('.gallery')
-        .on('wheel', '.inner', function(event) {
+        .on('wheel', '.inner', function (event) {
 
             var $this = $(this),
                 delta = (event.originalEvent.deltaX * 10);
@@ -295,7 +297,7 @@
             $this.scrollLeft($this.scrollLeft() + delta);
 
         })
-        .on('mouseenter', '.forward, .backward', function(event) {
+        .on('mouseenter', '.forward, .backward', function (event) {
 
             var $this = $(this),
                 $inner = $this.siblings('.inner'),
@@ -305,12 +307,12 @@
             clearInterval(this._gallery_moveIntervalId);
 
             // Start interval.
-            this._gallery_moveIntervalId = setInterval(function() {
+            this._gallery_moveIntervalId = setInterval(function () {
                 $inner.scrollLeft($inner.scrollLeft() + (5 * direction));
             }, 10);
 
         })
-        .on('mouseleave', '.forward, .backward', function(event) {
+        .on('mouseleave', '.forward, .backward', function (event) {
 
             // Clear move interval.
             clearInterval(this._gallery_moveIntervalId);
@@ -319,7 +321,7 @@
 
     // Lightbox.
     $('.gallery.lightbox')
-        .on('click', 'a', function(event) {
+        .on('click', 'a', function (event) {
 
             var $a = $(this),
                 $gallery = $a.parents('.gallery'),
@@ -352,7 +354,7 @@
             $modal.focus();
 
             // Delay.
-            setTimeout(function() {
+            setTimeout(function () {
 
                 // Unlock.
                 $modal[0]._locked = false;
@@ -360,7 +362,7 @@
             }, 600);
 
         })
-        .on('click', '.modal', function(event) {
+        .on('click', '.modal', function (event) {
 
             var $modal = $(this),
                 $modalImg = $modal.find('img');
@@ -381,12 +383,12 @@
                 .removeClass('loaded')
 
             // Delay.
-            setTimeout(function() {
+            setTimeout(function () {
 
                 $modal
                     .removeClass('visible')
 
-                setTimeout(function() {
+                setTimeout(function () {
 
                     // Clear src.
                     $modalImg.attr('src', '');
@@ -402,7 +404,7 @@
             }, 125);
 
         })
-        .on('keypress', '.modal', function(event) {
+        .on('keypress', '.modal', function (event) {
 
             var $modal = $(this);
 
@@ -413,12 +415,12 @@
         })
         .prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
         .find('img')
-        .on('load', function(event) {
+        .on('load', function (event) {
 
             var $modalImg = $(this),
                 $modal = $modalImg.parents('.modal');
 
-            setTimeout(function() {
+            setTimeout(function () {
 
                 // No longer visible? Bail.
                 if (!$modal.hasClass('visible'))

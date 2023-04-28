@@ -77,16 +77,12 @@
                                 <div class="modal-paragraph">MongoDB's query optimizer is classically a
                                     heuristics-based optimizer. What does this mean? This means when you get a query
                                     like this: </div>
-                                <div class="modal-paragraph">
-                                    db.collection.find({}).sort(1).limit(5).moreQuery();
-                                </div>
+                                <img src="images/mongodb-example.png" alt="" />
                                 <div class="modal-paragraph">
                                     MongoDB matches the steps of the query and does some optimizations like
                                     switching steps, choosing indexes, and other canonical optimizations that usually
                                     will make the query faster.
-                                </div>
 
-                                <div class="modal-paragraph">
                                     The Abstract Binding Tree, on the other hand, aims to create a new form of query
                                     representation that allows queries to go through a
                                     dynamic-programming based optimizer!
@@ -104,14 +100,58 @@
                                     databases, C++, and better programming, I learned about build systems, continuous
                                     integrations and continuous deployment (CI/CD), and more.</div>
 
-
-
-
-
-                                <div class="modal-paragraph"> <a target="_blank" rel="noopener noreferrer"
+                                <div class="modal-paragraph modal-link"> <a target="_blank" rel="noopener noreferrer"
                                         href="https://github.com/mongodb/mongo/tree/master/src/mongo/db/pipeline/abt">
-                                        Project
+                                        Go To Project
                                         Repository</a>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <!-- intersystems -->
+                        <div id="intersystemsModal" class="modal-portfolio">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <div class="modal-header">Intelligent Chart Review @ InterSystems</div>
+                                <div class="modal-paragraph">Intelligent Chart Review is a product that tackles a
+                                    multi-million dollar problem for physicians: surprisingly large amounts of time is
+                                    spent on chart review and chart data entry, rather than research or seeing patients.
+                                    Intelligent Chart Review seeks to make chart operations faster and more automated
+                                    using Natural Language Processing features! </div>
+                                <iframe width="420" height="315"
+                                    src="https://www.youtube.com/watch?v=1y31u1Z1mp0&ab_channel=InterSystemsDevelopers">
+                                </iframe>
+                                <div class="modal-paragraph">
+                                    Physicians are able to upload charts for multiple patients, and review each patient
+                                    in quick succession while analyzing them for the same medical data. Chart review is
+                                    dictated by the template creator - this was created by me!
+                                </div>
+
+                                <div class="modal-paragraph">
+                                    On this project, I worked on three major components: I created from the ground up
+                                    the
+                                    chart review template creator. Secondly, I refactored and rebuilt the Intelligent
+                                    Chart Review
+                                    underlying database structure for enforced foreign keys and optimized querying.
+                                    Lastly, I immplemented fuzzy search (Levenshtein distance) using the iKnow package
+                                    to help populate terms for NLP analysis.
+                                    As a result, Intelligent Chart Review was taken to a stage of viability in which it
+                                    was presented to two corporate clients by the end of the summer.
+                                </div>
+
+                                <div class="modal-paragraph">All of this was project was completed in Angular,
+                                    Typescript, and InterSystem's proprietary language. On top of learning about
+                                    databases, web development, and design, I learned a propietary language at-depth in
+                                    a two-week training program.</div>
+
+                                <div class="modal-paragraph modal-link"> <a target="_blank" rel="noopener noreferrer"
+                                        href="https://www.youtube.com/watch?v=1y31u1Z1mp0&ab_channel=InterSystemsDevelopers">
+                                        Link To Demo</a>
 
                                 </div>
 
@@ -152,6 +192,7 @@
                 // Get the <span> element that closes the modal
                 var span = document.getElementsByClassName("close")[0];
 
+
                 // When the user clicks on the button, open the modal
                 btn.onclick = function () {
                     console.log("MODAL OPEN")
@@ -159,17 +200,37 @@
                 }
 
                 // When the user clicks on <span> (x), close the modal
+
+                var intsys_modal = document.getElementById("intersystemsModal");
+
+                // Get the button that opens the modal
+                var intsys_btn = document.getElementById("intersystemsBtn");
+
+
+                // When the user clicks on the button, open the modal
+                intsys_btn.onclick = function () {
+                    intsys_modal.style.display = "block";
+                }
+
                 span.onclick = function () {
-                    console.log("MODAL CLOSE")
                     modal.style.display = "none";
+                }
+
+                var span2 = document.getElementsByClassName("close")[1];
+                span2.onclick = function () {
+                    intsys_modal.style.display = "none";
                 }
 
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function (event) {
                     if (event.target == modal) {
                         modal.style.display = "none";
+                        intsys_modal.style.display = "none";
                     }
+
                 }
+
+
 
             </script>
             <script src="assets/js/jquery.min.js"></script>

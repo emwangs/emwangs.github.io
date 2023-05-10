@@ -1,250 +1,290 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Portfolio &#8212 Emily Wang</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog-Z Bootstrap 5.0 HTML Template</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo-style.css">
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
     <link id="google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata:400">
-
 </head>
 
-<body class="is-preload">
+<body>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+    <header id="header">
+        <a href="/" class="logo"><img src="images/logo.png" alt="Emily Wang" /></a>
+        <nav id="nav">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li class="current">
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li><a href="assets/resume.pdf">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div style="text-align: center; padding-bottom: 5em;">
+    </div>
 
-        <!-- Header -->
-        <header id="header">
-            <a href="/" class="logo"><img src="images/logo.png" alt="Carolyn Wang" /></a>
-            <nav id="nav">
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li class="current">
-                        <a href="portfolio.html">Portfolio</a>
-                        <!--<ul>
-                            <li><a href="grad.html">Graduates</a></li>
-                            <li><a href="portrait.html">Portraits</a></li>
-                            <li><a href="concert.html">Concerts</a></li>
-                            <li><a href="street.html">Street</a></li>
-                            <li><a href="places-and-things.html">Places & Things</a></li>
-                            <li><a href="film.html">35mm Film</a></li>
-                        </ul>-->
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div style="text-align: center; padding-bottom: 1em;">
+        <h1>My Work</h1>
+    </div>
 
-        <!-- Main -->
-        <div id="main">
-
-            <!-- One -->
-            <!--<div class="inner" style="padding-bottom: 0;">-->
-            <div style="text-align: center; padding-bottom: 1em;">
-                <h1>My Work</h1>
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row tm-mb-90 tm-gallery">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/mongodb_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center" id="myBtn">
+                        <h2>View</h2>
+                        <!--<a href="photo-detail.html">View more</a>-->
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Summer 2022</span>
+                    <span>SWE Intern</span>
+                </div>
             </div>
-            <!-- Main -->
-            <div id="main" style="margin-top: 4em;">
-
-                <div class="box">
-                    <div class="gallery style2 small lightbox onload-fade-in">
-                        <article id="myBtn">
-                            <a class="image">
-                                <img src="images/mongodb.jpg" alt="" />
-                            </a>
-                        </article>
-                        <article id="intersystemsBtn">
-                            <a class="image">
-                                <img src="images/intersystems.jpg" alt="" />
-                            </a>
-                        </article>
-
-                        <div id="myModal" class="modal-portfolio">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <div class="modal-header">Abstract Binding Tree @ MongoDB</div>
-                                <div class="modal-paragraph">MongoDB's query optimizer is classically a
-                                    heuristics-based optimizer. What does this mean? This means when you get a query
-                                    like this: </div>
-                                <img src="images/mongodb-example.png" alt="" />
-                                <div class="modal-paragraph">
-                                    MongoDB matches the steps of the query and does some optimizations like
-                                    switching steps, choosing indexes, and other canonical optimizations that usually
-                                    will make the query faster.
-
-                                    The Abstract Binding Tree, on the other hand, aims to create a new form of query
-                                    representation that allows queries to go through a
-                                    dynamic-programming based optimizer!
-                                </div>
-
-                                <div class="modal-paragraph">
-                                    On this project, I worked on three components: I implemented $project functionality
-                                    in the new query optimizer. Secondly, I implemented type-bracketing essential to
-                                    greater-than and less-than queries. Lastly, I designed and implemented translating
-                                    $in expressions
-                                    in MQL; this took the size of the generated query tree from O(n)-sized tree to O(1)!
-                                </div>
-
-                                <div class="modal-paragraph">All of this was done in C++. On top of learning about
-                                    databases, C++, and better programming, I learned about build systems, continuous
-                                    integrations and continuous deployment (CI/CD), and more.</div>
-
-                                <div class="modal-paragraph modal-link"> <a target="_blank" rel="noopener noreferrer"
-                                        href="https://github.com/mongodb/mongo/tree/master/src/mongo/db/pipeline/abt">
-                                        Go To Project
-                                        Repository</a>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                        <!-- intersystems -->
-                        <div id="intersystemsModal" class="modal-portfolio">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <div class="modal-header">Intelligent Chart Review @ InterSystems</div>
-                                <div class="modal-paragraph">Intelligent Chart Review is a product that tackles a
-                                    multi-million dollar problem for physicians: surprisingly large amounts of time is
-                                    spent on chart review and chart data entry, rather than research or seeing patients.
-                                    Intelligent Chart Review seeks to make chart operations faster and more automated
-                                    using Natural Language Processing features! </div>
-                                <iframe width="420" height="315"
-                                    src="https://www.youtube.com/watch?v=1y31u1Z1mp0&ab_channel=InterSystemsDevelopers">
-                                </iframe>
-                                <div class="modal-paragraph">
-                                    Physicians are able to upload charts for multiple patients, and review each patient
-                                    in quick succession while analyzing them for the same medical data. Chart review is
-                                    dictated by the template creator - this was created by me!
-                                </div>
-
-                                <div class="modal-paragraph">
-                                    On this project, I worked on three major components: I created from the ground up
-                                    the
-                                    chart review template creator. Secondly, I refactored and rebuilt the Intelligent
-                                    Chart Review
-                                    underlying database structure for enforced foreign keys and optimized querying.
-                                    Lastly, I immplemented fuzzy search (Levenshtein distance) using the iKnow package
-                                    to help populate terms for NLP analysis.
-                                    As a result, Intelligent Chart Review was taken to a stage of viability in which it
-                                    was presented to two corporate clients by the end of the summer.
-                                </div>
-
-                                <div class="modal-paragraph">All of this was project was completed in Angular,
-                                    Typescript, and InterSystem's proprietary language. On top of learning about
-                                    databases, web development, and design, I learned a propietary language at-depth in
-                                    a two-week training program.</div>
-
-                                <div class="modal-paragraph modal-link"> <a target="_blank" rel="noopener noreferrer"
-                                        href="https://www.youtube.com/watch?v=1y31u1Z1mp0&ab_channel=InterSystemsDevelopers">
-                                        Link To Demo</a>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/intersystems.jpg" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Summer 2021</span>
+                    <span>SWE Intern</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/eastbanc_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Summer 2020</span>
+                    <span>SWE Intern</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/krasnow_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Summer 2019</span>
+                    <span>Research Intern</span>
                 </div>
             </div>
 
-            <!-- Footer -->
-            <footer id=" footer">
-                <div class="inner">
-                    <ul class="icons">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/compiler_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Spring 2023</span>
+                    <span>Course Project</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/coalescence_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Spring 2022</span>
+                    <span>CoalescenceML</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/rapstudy_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Spring 2021</span>
+                    <span>Web Developer</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/pokerbot_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Fall 2021</span>
+                    <span>PokerBot</span>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container-fluid, tm-container-content -->
 
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/emwangs"
-                                class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                        <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/emswang/"
-                                class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>&copy; 2023 Emily Wang</li>
+    <div id="myModal" class="modal-portfolio">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">Abstract Binding Tree @ MongoDB</div>
+            <div class="modal-paragraph">MongoDB's query optimizer is classically a
+                heuristics-based optimizer. What does this mean? This means when you get a query
+                like this: </div>
+            <img src="images/mongodb-example.png" alt="" style="width: 40%;
+            height: auto; align-self: center;
+          " />
+            <div class="modal-paragraph">
+                MongoDB matches the steps of the query and does some optimizations like
+                switching steps, choosing indexes, and other canonical optimizations that usually
+                will make the query faster.
+
+                The Abstract Binding Tree, on the other hand, aims to create a new form of query
+                representation that allows queries to go through a
+                dynamic-programming based optimizer!
+            </div>
+
+            <div class="modal-paragraph">
+                On this project, I worked on three components: I implemented $project functionality
+                in the new query optimizer. Secondly, I implemented type-bracketing essential to
+                greater-than and less-than queries. Lastly, I designed and implemented translating
+                $in expressions
+                in MQL; this took the size of the generated query tree from O(n)-sized tree to O(1)!
+            </div>
+
+            <div class="modal-paragraph">All of this was done in C++. On top of learning about
+                databases, C++, and better programming, I learned about build systems, continuous
+                integrations and continuous deployment (CI/CD), and more.</div>
+
+            <div class="modal-paragraph modal-link"> <a target="_blank" rel="noopener noreferrer"
+                    href="https://github.com/mongodb/mongo/tree/master/src/mongo/db/pipeline/abt">
+                    Go To Project
+                    Repository</a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="container-fluid tm-container-small">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">About Catalog-Z</h3>
+                    <p>Catalog-Z is free <a rel="sponsored" href="https://v5.getbootstrap.com/">Bootstrap 5</a> Alpha 2
+                        HTML Template for video and photo websites. You can freely use this TemplateMo layout for a
+                        front-end integration with any kind of CMS website.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                    <h3 class="tm-text-primary mb-4 tm-footer-title">Our Links</h3>
+                    <ul class="tm-footer-links pl-0">
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Our Company</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-            </footer>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
+                    <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
+                        <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
+                        <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+                        <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+                        <li class="mb-2"><a href="https://pinterest.com"><i class="fab fa-pinterest"></i></a></li>
+                    </ul>
+                    <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
+                    <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
+                    Copyright 2020 Catalog-Z Company. All rights reserved.
+                </div>
+                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
+                    Designed by <a href="https://templatemo.com" class="tm-text-gray" rel="sponsored"
+                        target="_parent">TemplateMo</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-            <!--</div>-->
+    <script src="assets/js/plugins.js"></script>
+    <script>
+        $(window).on("load", function () {
+            $('body').addClass('loaded');
+        });
+    </script>
+    <script>
+        var modal = document.getElementById("myModal");
 
-            <!-- Scripts -->
-            <script>
-                var modal = document.getElementById("myModal");
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
 
-                // Get the button that opens the modal
-                var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close");
+        console.log(span);
 
-                // Get the <span> element that closes the modal
-                var span = document.getElementsByClassName("close")[0];
-
-
-                // When the user clicks on the button, open the modal
-                btn.onclick = function () {
-                    console.log("MODAL OPEN")
-                    modal.style.display = "block";
-                }
-
-                // When the user clicks on <span> (x), close the modal
-
-                var intsys_modal = document.getElementById("intersystemsModal");
-
-                // Get the button that opens the modal
-                var intsys_btn = document.getElementById("intersystemsBtn");
-
-
-                // When the user clicks on the button, open the modal
-                intsys_btn.onclick = function () {
-                    intsys_modal.style.display = "block";
-                }
-
-                span.onclick = function () {
-                    modal.style.display = "none";
-                }
-
-                var span2 = document.getElementsByClassName("close")[1];
-                span2.onclick = function () {
-                    intsys_modal.style.display = "none";
-                }
-
-                // When the user clicks anywhere outside of the modal, close it
-                window.onclick = function (event) {
-                    if (event.target == modal) {
-                        modal.style.display = "none";
-                        intsys_modal.style.display = "none";
-                    }
-
-                }
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        console.log(span);
 
 
 
-            </script>
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.dropotron.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            console.log("MODAL OPEN")
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+
+        /*var intsys_modal = document.getElementById("intersystemsModal");
+
+        // Get the button that opens the modal
+        var intsys_btn = document.getElementById("intersystemsBtn");
 
 
+        // When the user clicks on the button, open the modal
+        intsys_btn.onclick = function () {
+            intsys_modal.style.display = "block";
+        }*/
 
+        span.onclick = function () {
+            console.log("MODAL CLOSE");
+            modal.style.display = "none";
+        }
+
+        var span2 = document.getElementsByClassName("close")[1];
+        span2.onclick = function () {
+            intsys_modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                intsys_modal.style.display = "none";
+            }
+
+        }
+
+    </script>
 </body>
-
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog-Z Bootstrap 5.0 HTML Template</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/templatemo-style.css">
@@ -41,7 +41,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="images/mongodb_logo.png" alt="Image" class="img-fluid">
-                    <figcaption class="d-flex align-items-center justify-content-center" id="myBtn">
+                    <figcaption class="d-flex align-items-center justify-content-center" id="mongodb-btn">
                         <h2>View</h2>
                         <!--<a href="photo-detail.html">View more</a>-->
                     </figcaption>
@@ -54,13 +54,25 @@
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="images/intersystems.jpg" alt="Image" class="img-fluid">
-                    <figcaption class="d-flex align-items-center justify-content-center">
+                    <figcaption class="d-flex align-items-center justify-content-center" id="intersystems-btn">
                         <h2>View</h2>
                     </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">Summer 2021</span>
                     <span>SWE Intern</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
+                    <img src="images/coalescence_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center" id="coalescence-btn">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Spring 2022</span>
+                    <span>CoalescenceML</span>
                 </div>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
@@ -100,18 +112,7 @@
                     <span>Course Project</span>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                <figure class="effect-ming tm-video-item">
-                    <img src="images/coalescence_logo.png" alt="Image" class="img-fluid">
-                    <figcaption class="d-flex align-items-center justify-content-center">
-                        <h2>View</h2>
-                    </figcaption>
-                </figure>
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span class="tm-text-gray-light">Spring 2022</span>
-                    <span>CoalescenceML</span>
-                </div>
-            </div>
+
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="images/rapstudy_logo.png" alt="Image" class="img-fluid">
@@ -139,7 +140,7 @@
         </div> <!-- row -->
     </div> <!-- container-fluid, tm-container-content -->
 
-    <div id="myModal" class="modal-portfolio">
+    <div id="mongodb-modal" class="modal-portfolio">
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -161,10 +162,10 @@
             </div>
 
             <div class="modal-paragraph">
-                On this project, I worked on three components: I implemented $project functionality
-                in the new query optimizer. Secondly, I implemented type-bracketing essential to
+                On this project, I worked on three components: I implemented <i>$project functionality</i>
+                in the new query optimizer. Secondly, I implemented <i>type-bracketing</i> essential to
                 greater-than and less-than queries. Lastly, I designed and implemented translating
-                $in expressions
+                <i>$in expressions</i>
                 in MQL; this took the size of the generated query tree from O(n)-sized tree to O(1)!
             </div>
 
@@ -183,15 +184,86 @@
         </div>
     </div>
 
+    <!-- intersystems -->
+    <div id="intersystems-modal" class="modal-portfolio">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">Intelligent Chart Review @ InterSystems</div>
+            <p class="modal-paragraph">Intelligent Chart Review is a product that tackles a
+                multi-million dollar problem for physicians: surprisingly large amounts of time is
+                spent on chart review and chart data entry, rather than research or seeing patients.
+                Intelligent Chart Review seeks to make chart operations <strong>faster</strong> and more
+                <b>automated</b>
+                using Natural Language Processing features!
+            </p>
+            <iframe width="420" height="315" style="align-self: center;"
+                src="https://www.youtube.com/embed/1y31u1Z1mp0">
+            </iframe>
+            <p class="modal-paragraph">
+                Physicians are able to upload charts for multiple patients, and review each patient
+                in quick succession while analyzing them for the same medical data. Chart review is
+                dictated by the template creator - <i>this was created by me</i>!
+            </p>
+
+            <p class="modal-paragraph">
+                On this project, I worked on three major components: I created from the ground up
+                the
+                chart review template creator. Secondly, I refactored and rebuilt the Intelligent
+                Chart Review
+                underlying database structure for enforced foreign keys and optimized querying.
+                Lastly, I immplemented fuzzy search (Levenshtein distance) using the iKnow package
+                to help populate terms for NLP analysis.
+                As a result, Intelligent Chart Review was taken to a stage of viability in which it
+                was presented to <b>two corporate clients</b> by the end of the summer.
+            </p>
+
+            <p class="modal-paragraph">All of this was project was completed in Angular,
+                Typescript, and InterSystem's proprietary language. On top of learning about
+                databases, web development, and design, I learned a <b>propietary language</b> at-depth in
+                a two-week training program.</p>
+
+            <p class="modal-paragraph modal-link"> <a target="_blank" rel="noopener noreferrer"
+                    href="https://www.youtube.com/watch?v=1y31u1Z1mp0&ab_channel=InterSystemsDevelopers">
+                    Link To Demo</a>
+
+            </p>
+
+
+        </div>
+    </div>
+
+    <div id="coalescence-modal" class="modal-portfolio">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">CoalescenceML @ Cornell Data Science</div>
+            <p class="modal-paragraph">Machine Learning these days very often does not escape the
+                Jupyter Notebook. We aimed to launch an open-source MLOps framework to develop
+                industry-grade production ML pipelines. </p>
+            <iframe src="https://drive.google.com/file/d/13uOeuy_M1ywMyTaTSBPpoxyPNeMVv1s8/preview" width="400"
+                height="300" allow="autoplay" style=" align-self: center;"></iframe>
+            <p class="modal-paragraph">
+                CoalescenceML v0.5.1 was launched in Spring of 2022, and although is no longer supported, was a large
+                learning experience!
+            </p>
+            <img src="images/coalescence_img.png" alt="" style="width: 40%;
+            height: auto; align-self: center;
+          " />
+
+            <div class="modal-paragraph modal-link"> <a target="_blank" rel="noopener noreferrer"
+                    href="https://pypi.org/project/coalescenceml/">
+                    See the PyPI package here!</a>
+
+            </div>
+
+
+        </div>
+    </div>
+
     <footer id="footer">
         <div class="inner">
-            <ul class="icons">
-
-                <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/emwangs"
-                        class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/emswang/"
-                        class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-            </ul>
             <ul class="copyright">
                 <li>&copy; 2023 Emily Wang</li>
             </ul>
@@ -199,46 +271,7 @@
     </footer>
 
 
-    <!--<footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
-        <div class="container-fluid tm-container-small">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
-                    <h3 class="tm-text-primary mb-4 tm-footer-title">About Catalog-Z</h3>
-                    <p>Catalog-Z is free <a rel="sponsored" href="https://v5.getbootstrap.com/">Bootstrap 5</a> Alpha 2
-                        HTML Template for video and photo websites. You can freely use this TemplateMo layout for a
-                        front-end integration with any kind of CMS website.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
-                    <h3 class="tm-text-primary mb-4 tm-footer-title">Our Links</h3>
-                    <ul class="tm-footer-links pl-0">
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Our Company</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
-                    <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
-                        <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                        <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                        <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
-                        <li class="mb-2"><a href="https://pinterest.com"><i class="fab fa-pinterest"></i></a></li>
-                    </ul>
-                    <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
-                    <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
-                    Copyright 2020 Catalog-Z Company. All rights reserved.
-                </div>
-                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
-                    Designed by <a href="https://templatemo.com" class="tm-text-gray" rel="sponsored"
-                        target="_parent">TemplateMo</a>
-                </div>
-            </div>
-        </div>
-    </footer>-->
+
 
     <script src="assets/js/plugins.js"></script>
     <script>
@@ -247,56 +280,51 @@
         });
     </script>
     <script>
-        var modal = document.getElementById("myModal");
+        var close_spans = document.getElementsByClassName("close");
+
+        var mongodb_modal = document.getElementById("mongodb-modal");
+        var intersystems_modal = document.getElementById("intersystems-modal");
+        var coalescence_modal = document.getElementById("coalescence-modal")
 
         // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        var span = document.getElementsByClassName("close");
-        console.log(span);
+        var mongodb_btn = document.getElementById("mongodb-btn");
+        var intersystems_btn = document.getElementById("intersystems-btn");
+        var coalescence_btn = document.getElementById("coalescence-btn");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        console.log(span);
-
-
-
-        // When the user clicks on the button, open the modal
-        btn.onclick = function () {
-            console.log("MODAL OPEN")
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-
-        /*var intsys_modal = document.getElementById("intersystemsModal");
-
-        // Get the button that opens the modal
-        var intsys_btn = document.getElementById("intersystemsBtn");
+        var mongodb_span = close_spans[0];
+        var intersystems_span = close_spans[1];
+        var coalescence_span = close_spans[2];
 
 
         // When the user clicks on the button, open the modal
-        intsys_btn.onclick = function () {
-            intsys_modal.style.display = "block";
-        }*/
-
-        span.onclick = function () {
-            console.log("MODAL CLOSE");
-            modal.style.display = "none";
+        mongodb_btn.onclick = function () {
+            mongodb_modal.style.display = "block";
+        }
+        intersystems_btn.onclick = function () {
+            intersystems_modal.style.display = "block";
+        }
+        coalescence_btn.onclick = function () {
+            coalescence_modal.style.display = "block";
         }
 
-        var span2 = document.getElementsByClassName("close")[1];
-        span2.onclick = function () {
-            intsys_modal.style.display = "none";
+        mongodb_span.onclick = function () {
+            mongodb_modal.style.display = "none";
+        }
+        intersystems_span.onclick = function () {
+            intersystems_modal.style.display = "none";
+        }
+        coalescence_span.onclick = function () {
+            coalescence_modal.style.display = "none";
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
             if (event.target == modal) {
-                modal.style.display = "none";
-                intsys_modal.style.display = "none";
+                intersystems_modal.style.display = "none";
+                mongodb_modal.style.display = "none";
+                coalescence_modal.style.display = "none";
             }
-
         }
 
     </script>

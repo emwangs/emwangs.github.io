@@ -90,7 +90,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="images/eastbanc_logo.png" alt="Image" class="img-fluid">
-                    <figcaption class="d-flex align-items-center justify-content-center">
+                    <figcaption class="d-flex align-items-center justify-content-center" id="eastbanc-btn">
                         <h2>View</h2>
                     </figcaption>
                 </figure>
@@ -285,24 +285,20 @@
         </div>
     </div>
 
-    <div id="compiler-modals" class="modal-portfolio">
+    <div id="eastbanc-modal" class="modal-portfolio">
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div class="modal-header">Compilers (CS4120) @ Cornell</div>
+            <div class="modal-header">TransitIQ @ EastBanc Technologies</div>
+            <img src="images/transitiq.png" alt="" style="width: 80%;
+            height: auto; align-self: center;
+          " />
             <p class="modal-paragraph">
-                This course offers an introduction to topics like lexical
-                scanning, parsing, type checking, code generation and
-                translation, an introduction to optimization, and compile-time and run-time support for modern
-                programming languages. </p>
-
-            <p class="modal-paragraph">
-                Currently I am building a fully-working compiler in C++ for the course-specified language Eta!
-            </p>
+                More info coming soon! </p>
 
             <div class="modal-paragraph modal-link">
-                <a target="_blank" rel="noopener noreferrer" href="https://www.cs.cornell.edu/courses/cs4120/2023sp/">
-                    Link to Course
+                <a target="_blank" rel="noopener noreferrer" href="https://transitiq.com/#what-is-transitiq">
+                    View the project here.
                 </a>
             </div>
         </div>
@@ -332,21 +328,21 @@
         var intersystems_modal = document.getElementById("intersystems-modal");
         var coalescence_modal = document.getElementById("coalescence-modal");
         var compiler_modal = document.getElementById("compiler-modal");
-        console.log(compiler_modal);
+        var east_modal = document.getElementById("eastbanc-modal");
 
         // Get the button that opens the modal
         var mongodb_btn = document.getElementById("mongodb-btn");
         var intersystems_btn = document.getElementById("intersystems-btn");
         var coalescence_btn = document.getElementById("coalescence-btn");
         var compiler_btn = document.getElementById("compiler-btn");
-        console.log(compiler_btn);
+        var east_btn = document.getElementById("eastbanc-btn");
 
         // Get the <span> element that closes the modal
         var mongodb_span = close_spans[0];
         var intersystems_span = close_spans[1];
         var coalescence_span = close_spans[2];
         var compiler_span = close_spans[3];
-        console.log(compiler_span);
+        var east_span = close_spans[4];
 
 
         // When the user clicks on the button, open the modal
@@ -359,10 +355,11 @@
         coalescence_btn.onclick = function () {
             coalescence_modal.style.display = "block";
         }
-        console.log("here");
         compiler_btn.onclick = function () {
-            console.log("compiler btn clicked");
             compiler_modal.style.display = "block";
+        }
+        east_btn.onclick = function () {
+            east_modal.style.display = "block";
         }
 
         mongodb_span.onclick = function () {
@@ -376,6 +373,9 @@
         }
         compiler_span.onclick = function () {
             compiler_modal.style.display = "none";
+        }
+        east_span.onclick = function () {
+            east_modal.style.display = "none";
         }
 
     </script>

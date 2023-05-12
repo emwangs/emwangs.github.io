@@ -77,6 +77,18 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
+                    <img src="images/compiler_logo.png" alt="Image" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center" id="compiler-btn">
+                        <h2>View</h2>
+                    </figcaption>
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light">Spring 2023</span>
+                    <span>Course Project</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <figure class="effect-ming tm-video-item">
                     <img src="images/eastbanc_logo.png" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>View</h2>
@@ -97,19 +109,6 @@
                 <div class="d-flex justify-content-between tm-text-gray">
                     <span class="tm-text-gray-light">Summer 2019</span>
                     <span>Research Intern</span>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                <figure class="effect-ming tm-video-item">
-                    <img src="images/compiler_logo.png" alt="Image" class="img-fluid">
-                    <figcaption class="d-flex align-items-center justify-content-center">
-                        <h2>View</h2>
-                    </figcaption>
-                </figure>
-                <div class="d-flex justify-content-between tm-text-gray">
-                    <span class="tm-text-gray-light">Spring 2023</span>
-                    <span>Course Project</span>
                 </div>
             </div>
 
@@ -230,7 +229,6 @@
 
             </p>
 
-
         </div>
     </div>
 
@@ -240,13 +238,17 @@
             <span class="close">&times;</span>
             <div class="modal-header">CoalescenceML @ Cornell Data Science</div>
             <p class="modal-paragraph">Machine Learning these days very often does not escape the
-                Jupyter Notebook. We aimed to launch an open-source MLOps framework to develop
-                industry-grade production ML pipelines. </p>
+                Jupyter Notebook. There are a large number of steps, and many different tools that Machine Learning
+                Engineers must familiarize themselves with to put a machine learning model intor production. We aimed to
+                launch an
+                open-source MLOps framework to develop
+                industry-grade production ML pipelines, all for a data scientist to work with in <i>one place</i>! </p>
             <iframe src="https://drive.google.com/file/d/13uOeuy_M1ywMyTaTSBPpoxyPNeMVv1s8/preview" width="400"
                 height="300" allow="autoplay" style=" align-self: center;"></iframe>
             <p class="modal-paragraph">
                 CoalescenceML v0.5.1 was launched in Spring of 2022, and although is no longer supported, was a large
-                learning experience!
+                learning experience! This sparked my passion for work with true impact; the ability to deploy an
+                application is an underrated but exceedingly important skill.
             </p>
             <img src="images/coalescence_img.png" alt="" style="width: 40%;
             height: auto; align-self: center;
@@ -257,8 +259,52 @@
                     See the PyPI package here!</a>
 
             </div>
+        </div>
+    </div>
 
+    <div id="compiler-modal" class="modal-portfolio">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">Compilers (CS4120) @ Cornell</div>
+            <p class="modal-paragraph">
+                This course offers an introduction to topics like lexical
+                scanning, parsing, type checking, code generation and
+                translation, an introduction to optimization, and compile-time and run-time support for modern
+                programming languages. </p>
 
+            <p class="modal-paragraph">
+                Currently I am building a fully-working compiler in C++ for the course-specified language Eta!
+            </p>
+
+            <div class="modal-paragraph modal-link">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.cs.cornell.edu/courses/cs4120/2023sp/">
+                    Link to Course
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="compiler-modals" class="modal-portfolio">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">Compilers (CS4120) @ Cornell</div>
+            <p class="modal-paragraph">
+                This course offers an introduction to topics like lexical
+                scanning, parsing, type checking, code generation and
+                translation, an introduction to optimization, and compile-time and run-time support for modern
+                programming languages. </p>
+
+            <p class="modal-paragraph">
+                Currently I am building a fully-working compiler in C++ for the course-specified language Eta!
+            </p>
+
+            <div class="modal-paragraph modal-link">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.cs.cornell.edu/courses/cs4120/2023sp/">
+                    Link to Course
+                </a>
+            </div>
         </div>
     </div>
 
@@ -284,17 +330,23 @@
 
         var mongodb_modal = document.getElementById("mongodb-modal");
         var intersystems_modal = document.getElementById("intersystems-modal");
-        var coalescence_modal = document.getElementById("coalescence-modal")
+        var coalescence_modal = document.getElementById("coalescence-modal");
+        var compiler_modal = document.getElementById("compiler-modal");
+        console.log(compiler_modal);
 
         // Get the button that opens the modal
         var mongodb_btn = document.getElementById("mongodb-btn");
         var intersystems_btn = document.getElementById("intersystems-btn");
         var coalescence_btn = document.getElementById("coalescence-btn");
+        var compiler_btn = document.getElementById("compiler-btn");
+        console.log(compiler_btn);
 
         // Get the <span> element that closes the modal
         var mongodb_span = close_spans[0];
         var intersystems_span = close_spans[1];
         var coalescence_span = close_spans[2];
+        var compiler_span = close_spans[3];
+        console.log(compiler_span);
 
 
         // When the user clicks on the button, open the modal
@@ -307,6 +359,11 @@
         coalescence_btn.onclick = function () {
             coalescence_modal.style.display = "block";
         }
+        console.log("here");
+        compiler_btn.onclick = function () {
+            console.log("compiler btn clicked");
+            compiler_modal.style.display = "block";
+        }
 
         mongodb_span.onclick = function () {
             mongodb_modal.style.display = "none";
@@ -317,14 +374,8 @@
         coalescence_span.onclick = function () {
             coalescence_modal.style.display = "none";
         }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                intersystems_modal.style.display = "none";
-                mongodb_modal.style.display = "none";
-                coalescence_modal.style.display = "none";
-            }
+        compiler_span.onclick = function () {
+            compiler_modal.style.display = "none";
         }
 
     </script>
